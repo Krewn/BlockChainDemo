@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BlockChainExample</title>
+</head>
+<body>
+	<style>
+		#disp{width: 100%;}
+		table {
+		  border-collapse: separate;
+		  border-spacing: 3px 3px;
+		}
+		.blockDiv{
+		  min-width: 1px;
+		  margin: 3px;
+		  background-color: LightGray;
+		}
+	</style>
+	<h1>An Example Block Chain</h1>
+	
+	<div id="disp">
+	</div><br>
+	<div>
+	  Difficulty: <input type="range" min="0" max="32" value="50" id="dif">
+	  Expected Block Time(ms):<text id = "blockTime">...</text>
+	  <button type="button" id="newChain">New Chain</button>
+	</div>
+	<div>
+	  Payload: <input type="text" id="payload">
+	  <button type="button" id="newBlock">New Block</button>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.7/sjcl.js"></script>
+	<script src="bChai.js"></script>
+	<div>
+		<p>Setting the Difficulty determines the numeric threshold for exceptable hashes. The tighter the threshold the more nonce will be expeted to fail before an exceptable hash is produced.</p>
+		<p>While higher difficulty takes more time creating a resistance to tampering. </p>
+	</div>
+	
+</body>
+</html>
